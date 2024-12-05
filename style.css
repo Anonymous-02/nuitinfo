@@ -7,14 +7,28 @@ h1 {
     color: black;
     text-align: center;
   }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
+.grand-titre {
+	font-size: 75px;
+	border-radius: 5px;
+	color: aqua;
+	border-color: grey;
+	background-color: #000080;
+	border-width: 8px;
+	border-style:solid;
+}
+#top{
+	padding-top: 0px;
+	margin-top: 0px;
+	font-size: 35px;
+	border: none;
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
 
-  .center {
-    display:block;
-    margin: -10px;
-	width: 102%;
-  }
+.center {
+  display:block;
+  margin: -10px;
+  width: 102%;
+}
