@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      .grid-container {
+          display: grid;
+          place-items: center; /* Centre verticalement et horizontalement */
+          height: 100vh; /* Prend toute la hauteur de la fenêtre */
+      }
+    </style>
   </head>
   <body>
     <h1></h1>
@@ -16,6 +23,8 @@
       let myImg = document.getElementById("myImgId");
       myImg.onmousedown = GetCoordinates;
     </script>
-    <img src="CONTACT.png" alt="Bouton Image" onclick="" />
+    <div class="grid-container">
+      <img src="CONTACT.png" alt="Bouton Image" onclick="msg()" />
+    </div>
   </body>
 </html>
