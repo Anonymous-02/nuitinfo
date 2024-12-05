@@ -1,3 +1,8 @@
+body {
+    background-color: azure;
+	overflow-x: hidden;
+}
+
 #main {
     background-color:plum;
     width: 50%;
