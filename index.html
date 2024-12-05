@@ -10,9 +10,9 @@
     <img src="red.png" id="myImgId" />
     <p>X:<span id="x"></span></p>
     <p>Y:<span id="y"></span></p>
+    <script type="text/javascript">
+      let myImg = document.getElementById("myImgId");
+      myImg.onmousedown = GetCoordinates;
+    </script>
   </body>
-  <script type="text/javascript">
-    let myImg = document.getElementById("myImgId");
-    myImg.onmousedown = GetCoordinates;
-  </script>
 </html>
