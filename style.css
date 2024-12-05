@@ -16,4 +16,5 @@ h1 {
   .center {
     display:block;
     margin: -10px;
+	width: 102%;
   }
