@@ -1,6 +1,6 @@
-document.getElementById("Contact").addEventListener("click", function() {
+function msg() {
   alert("Bonjour ! Merci d'avoir cliqué sur le bouton.");
-});
+}
 
 function FindPosition(oElement) {
   if (typeof oElement.offsetParent != "undefined") {
