@@ -1,7 +1,3 @@
-function msg() {
-  alert("Bonjour ! Merci d'avoir cliqué sur le bouton.");
-}
-
 function FindPosition(oElement) {
   if (typeof oElement.offsetParent != "undefined") {
     for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
