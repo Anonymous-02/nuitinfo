@@ -8,22 +8,42 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
       .grid-container {
-          display: grid;
-          place-items: center; /* Centre verticalement et horizontalement */
-          height: 100vh; /* Prend toute la hauteur de la fenêtre */
+        display: grid;
+        place-items: center; /* Centre verticalement et horizontalement */
+        height: 100vh; /* Prend toute la hauteur de la fenêtre */
       }
     </style>
   </head>
   <body>
-    <img src="ocean.jpg" id="myImgId" class="center" />
+    <map name="ocean">
+      <area shape="circle" coords="144,158,180" onclick="fiche(0)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(1)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(2)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(3)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(4)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(5)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(6)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(7)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(8)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(9)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(10)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(11)" alt="" />
+      <area shape="circle" coords="144,158,180" onclick="fiche(12)" alt="" />
+    </map>
+    <img src="ocean.jpg" id="ocean" class="center" />
     <p>X:<span id="x"></span></p>
     <p>Y:<span id="y"></span></p>
     <script type="text/javascript">
-      let myImg = document.getElementById("myImgId");
+      let myImg = document.getElementById("ocean");
       myImg.onmousedown = GetCoordinates;
     </script>
     <div class="grid-container">
-      <img src="CONTACT.png" alt="Bouton Image" onclick="msg()" />
+      <img
+        src="CONTACT.png"
+        alt="Bouton Image"
+        onclick="msg()"
+        usemap="#ocean"
+      />
     </div>
   </body>
 </html>
