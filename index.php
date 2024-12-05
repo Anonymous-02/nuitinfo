@@ -9,7 +9,7 @@ echo ('
     <script src="index.js"></script>
   </head>
   <body>
-    <img src="corps.jpeg" id="myImgId" />
+    <img src="images/corps.jpeg" id="myImgId" />
     <p>X:<span id="x"></span></p>
     <p>Y:<span id="y"></span></p>
     <script type="text/javascript">
