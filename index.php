@@ -1,5 +1,5 @@
 <?php
-echo('
+echo ('
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,4 +17,4 @@ echo('
       myImg.onmousedown = GetCoordinates;
     </script>
   </body>
-</html>')
+</html>');
