@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <h1></h1>
     <img src="ocean.jpg" id="myImgId" class="center" />
     <p>X:<span id="x"></span></p>
     <p>Y:<span id="y"></span></p>
@@ -15,8 +16,6 @@
       let myImg = document.getElementById("myImgId");
       myImg.onmousedown = GetCoordinates;
     </script>
-    <button id="Contact">
-      <img src="CONTACT.png" alt="Bouton Image">
-  </button>
+    <img src="CONTACT.png" alt="Bouton Image" onclick="msg()" />
   </body>
 </html>
