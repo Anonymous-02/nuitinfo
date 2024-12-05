@@ -1,5 +1,12 @@
+body {
+    background-color: azure;
+	overflow-x: hidden;
+}
+
 #main {
-    background-color:rgb(253, 253, 241);
-    width: 300px;
+    background-color:plum;
+    width: 50%;
     height: 100px;
+    text-align: center;
+    font-size: 30px;
 }
