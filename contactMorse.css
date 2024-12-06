@@ -1,21 +1,53 @@
-body {
-    background-color: azure;
-	overflow-x: hidden;
-}
-
-#main {
-    background-color:plum;
-    width: 50%;
-    height: 100px;
-    text-align: center;
-    font-size: 30px;
-    align-content: center;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .center-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    background-color: #f8f9fa;
+    height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.morse-image {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #333;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: #333;
+    word-wrap: break-word; /* Ensures long outputs break to the next line */
 }
