@@ -29,3 +29,7 @@ window.onload = function () {
     test.attachEvent("onmousewheel", showResults); // IE
   }
 };
+
+document.getElementById("Contact").addEventListener("click", function() {
+  location.href = document.URL.replace("ocean.html", "contactMorse.html");
+});
