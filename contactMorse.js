@@ -2,12 +2,11 @@ const clickArea = document.getElementById("click-area");
 const morseOutput = document.getElementById("morse-output");
 const textOutput = document.getElementById("text-output");
 
-let timer; // To track the duration of the click
-let holdTime; // To calculate the hold duration
-let inactivityTimer; // Timer for inactivity (end of a character)
-let currentMorse = ""; // To store the current Morse code for a character
+let timer;
+let holdTime;
+let inactivityTimer;
+let currentMorse = "";
 
-// Morse code dictionary
 const morseToChar = {
   ".-": "a",
   "-...": "b",
@@ -37,10 +36,9 @@ const morseToChar = {
   "--..": "z",
   "...---...": "@",
   "-.-..--.-.": ".",
-  "/": " ", // Space for clarity
+  "/": " ",
 };
 
-// Function to translate Morse code to text
 function translateMorse() {
   const letter = morseToChar[currentMorse] || "?"; // Translate or use "?" for unknown
   textOutput.innerText += letter; // Add the translated letter to the text output
@@ -53,25 +51,23 @@ function translateMorse() {
 }
 
 clickArea.addEventListener("mousedown", () => {
-  clearTimeout(inactivityTimer); // Clear inactivity timer
-  timer = Date.now(); // Record when the button is pressed
+  clearTimeout(inactivityTimer);
+  timer = Date.now();
 });
 
 clickArea.addEventListener("mouseup", () => {
-  holdTime = Date.now() - timer; // Calculate how long the button was held
+  holdTime = Date.now() - timer;
 
-  // Add to the current Morse code based on duration
   if (holdTime >= 500 && holdTime < 1000) {
     currentMorse += ".";
   } else if (holdTime >= 1000 && holdTime < 2000) {
     currentMorse += "-";
   }
 
-  morseOutput.innerText = currentMorse; // Update the current Morse code display
+  morseOutput.innerText = currentMorse;
 
-  // Reset inactivity timer
   inactivityTimer = setTimeout(() => {
-    translateMorse(); // Translate the Morse code after 5 seconds of inactivity
+    translateMorse();
   }, 5000);
 });
 
