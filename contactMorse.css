@@ -9,4 +9,13 @@ body {
     height: 100px;
     text-align: center;
     font-size: 30px;
+    align-content: center;
+}
+
+.center-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f8f9fa;
 }
