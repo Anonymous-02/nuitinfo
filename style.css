@@ -13,8 +13,8 @@ h1 {
 	font-size: 75px;
 	border-radius: 5px;
 	color: aqua;
-	border-color: grey;
-	background-color: #000080;
+	border-color: rgb(81, 133, 245);
+	background-color: teal;
 	border-width: 8px;
 	border-style:solid;
 }
