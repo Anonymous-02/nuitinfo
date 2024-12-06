@@ -2,12 +2,11 @@ const clickArea = document.getElementById('click-area');
 const morseOutput = document.getElementById('morse-output');
 const textOutput = document.getElementById('text-output');
 
-let timer; // To track the duration of the click
-let holdTime; // To calculate the hold duration
-let inactivityTimer; // Timer for inactivity (end of a character)
-let currentMorse = ""; // To store the current Morse code for a character
+let timer; 
+let holdTime; 
+let inactivityTimer; 
+let currentMorse = ""; 
 
-// Morse code dictionary
 const morseToChar = {
     ".-": "a",
     "-...": "b",
@@ -37,36 +36,34 @@ const morseToChar = {
     "--..": "z",
     "...---...": "@",
     "-.-..--.-.": ".",
-    "/": " " // Space for clarity
+    "/": " " 
 };
 
-// Function to translate Morse code to text
+
 function translateMorse() {
-    const letter = morseToChar[currentMorse] || "?"; // Translate or use "?" for unknown
-    textOutput.innerText += letter; // Add the translated letter to the text output
-    currentMorse = ""; // Reset for the next character
-    morseOutput.innerText = ""; // Clear the current Morse code display
+    const letter = morseToChar[currentMorse] || "?"; 
+    textOutput.innerText += letter; 
+    currentMorse = ""; 
+    morseOutput.innerText = ""; 
 }
 
 clickArea.addEventListener('mousedown', () => {
-    clearTimeout(inactivityTimer); // Clear inactivity timer
-    timer = Date.now(); // Record when the button is pressed
+    clearTimeout(inactivityTimer); 
+    timer = Date.now(); 
 });
 
 clickArea.addEventListener('mouseup', () => {
-    holdTime = Date.now() - timer; // Calculate how long the button was held
-
-    // Add to the current Morse code based on duration
+    holdTime = Date.now() - timer; 
+    
     if (holdTime >= 500 && holdTime < 1000) {
         currentMorse += ".";
     } else if (holdTime >= 1000 && holdTime < 2000) {
         currentMorse += "-";
     }
 
-    morseOutput.innerText = currentMorse; // Update the current Morse code display
-
-    // Reset inactivity timer
+    morseOutput.innerText = currentMorse; 
+    
     inactivityTimer = setTimeout(() => {
-        translateMorse(); // Translate the Morse code after 5 seconds of inactivity
+        translateMorse(); 
     }, 5000);
 });
