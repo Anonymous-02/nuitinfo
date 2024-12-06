@@ -18,7 +18,8 @@ window.onload = function () {
         location.href = document.URL.replace("paralleles.html", "ocean.html");
       else if (document.URL.includes("index.html"))
         location.href = document.URL.replace("index.html", "paralleles.html");
-      else location.href = document.URL + "paralleles.html";
+      else if (!document.URL.includes("ocean.html"))
+        location.href = document.URL + "paralleles.html";
     }
   }
   if (test.addEventListener) {
