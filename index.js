@@ -32,5 +32,16 @@ function GetCoordinates(e) {
   document.getElementById("x").innerHTML = PosX;
   document.getElementById("y").innerHTML = PosY;
 }
-const fiches = [];
-function fiche(x) {}
+const fiches = [
+  "CO2-virus.png",
+  "paquebot-bactéries.png",
+  "supeche-surmenage.png",
+  "voilier-bactéries.png",
+  "courant-coeur.png",
+];
+function fiche(x) {
+  console.log("fiche");
+  document.getElementById("ocean").src = "fiche/" + fiches[x];
+  document.getElementById("ocean").style.scale = "50%";
+  document.getElementById("ocean").style.marginTop = "-30%";
+}
