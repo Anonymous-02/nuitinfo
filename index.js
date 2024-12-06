@@ -32,3 +32,5 @@ function GetCoordinates(e) {
   document.getElementById("x").innerHTML = PosX;
   document.getElementById("y").innerHTML = PosY;
 }
+const fiches = [];
+function fiche(x) {}
