@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="contactMorse.css" />
-  </head>
-  <body>
-    <div id="main">Ecriver votre e-mail. En morse.</div>
-    <div id="main">_________@_____</div>
-    <img src="images/code-morse.jpg" id="morse" class="center-container" />
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Email in Morse</title>
+    <link rel="stylesheet" href="contactMorse.css">
+</head>
+<body>
+    <div class="center-container">
+        <h2>Write your email in Morse</h2>
+        <button id="click-area">Click and Hold</button>
+        <p><strong>Code Morse courant:</strong> <span id="morse-output"></span></p>
+        <p><strong>Ton e-mail:</strong> <span id="text-output"></span></p>
+    </div>
+    <script src="contactMorse.js"></script>
+</body>
 </html>
-
-<script src="contactMorse.js"></script>
